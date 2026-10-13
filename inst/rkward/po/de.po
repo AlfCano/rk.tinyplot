@@ -1,0 +1,234 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.tinyplot 0.0.1\n"
+"Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
+"POT-Creation-Date: 2026-10-13 09:17-0600\n"
+"PO-Revision-Date: 2026-10-13 09:17-0600\n"
+"Last-Translator: Alfonso Cano <alfonso.cano@correo.buap.mx>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "1D Distributions"
+msgstr "1D-Verteilungen"
+
+msgid "tinyplot: 1D Distributions"
+msgstr "tinyplot: 1D-Verteilungen"
+
+msgid "2D Relationships"
+msgstr "2D-Beziehungen"
+
+msgid "tinyplot: 2D Relationships"
+msgstr "tinyplot: 2D-Beziehungen"
+
+msgid "Data"
+msgstr "Daten"
+
+msgid "Aesthetics"
+msgstr "Ästhetik"
+
+msgid "Labels & Themes"
+msgstr "Beschriftungen & Themes"
+
+msgid "Output"
+msgstr "Ausgabe"
+
+msgid "Data Frame"
+msgstr "Data Frame"
+
+msgid "Variable (X)"
+msgstr "Variable (X)"
+
+msgid "X Axis Variable"
+msgstr "X-Achsen-Variable"
+
+msgid "Y Axis Variable"
+msgstr "Y-Achsen-Variable"
+
+msgid "Group By (Color/Fill)"
+msgstr "Gruppieren nach (Farbe/Füllung)"
+
+msgid "Facet Variable (Subplots)"
+msgstr "Facetten-Variable (Teilgraphen)"
+
+msgid "Plot Type"
+msgstr "Diagrammtyp"
+
+msgid "Density"
+msgstr "Dichte"
+
+msgid "Histogram"
+msgstr "Histogramm"
+
+msgid "Boxplot"
+msgstr "Boxplot"
+
+msgid "Scatter (Points)"
+msgstr "Streudiagramm (Punkte)"
+
+msgid "Line"
+msgstr "Linie"
+
+msgid "Both (Points & Line)"
+msgstr "Beides (Punkte & Linie)"
+
+msgid "Step"
+msgstr "Stufe (Step)"
+
+msgid "Jitter"
+msgstr "Jitter (Streuung)"
+
+msgid "Violin"
+msgstr "Violin-Plot"
+
+msgid "Ridge"
+msgstr "Kamm (Ridge)"
+
+msgid "Loess Smoother"
+msgstr "Loess-Glättung"
+
+msgid "Linear Model (lm)"
+msgstr "Lineares Modell (lm)"
+
+msgid "Pointrange"
+msgstr "Punktbereich (Pointrange)"
+
+msgid "Fill Opacity (Alpha)"
+msgstr "Füllungsdeckkraft (Alpha)"
+
+msgid "Point Character (pch)"
+msgstr "Punktzeichen (pch)"
+
+msgid "Line Width (lwd)"
+msgstr "Linienbreite (lwd)"
+
+msgid "Opacity (Alpha)"
+msgstr "Deckkraft (Alpha)"
+
+msgid "Add Regression Line (lm) layer over plot"
+msgstr "Regressionslinie (lm) als Ebene über den Plot legen"
+
+msgid "Text Labels"
+msgstr "Textbeschriftungen"
+
+msgid "Main Title"
+msgstr "Haupttitel"
+
+msgid "Subtitle"
+msgstr "Untertitel"
+
+msgid "X-Axis Label"
+msgstr "X-Achsen-Beschriftung"
+
+msgid "Y-Axis Label"
+msgstr "Y-Achsen-Beschriftung"
+
+msgid "tinyplot Themes & Styling"
+msgstr "tinyplot Themes & Stile"
+
+msgid "Plot Theme"
+msgstr "Diagramm-Theme"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "Minimal"
+msgstr "Minimal"
+
+msgid "Ipsum"
+msgstr "Ipsum"
+
+msgid "Clean"
+msgstr "Sauber (Clean)"
+
+msgid "Classic"
+msgstr "Klassisch"
+
+msgid "BW"
+msgstr "Schwarz-Weiß (BW)"
+
+msgid "Tufte"
+msgstr "Tufte"
+
+msgid "Dark"
+msgstr "Dunkel (Dark)"
+
+msgid "Void"
+msgstr "Leer (Void)"
+
+msgid "Color Palette"
+msgstr "Farbpalette"
+
+msgid "Okabe-Ito"
+msgstr "Okabe-Ito"
+
+msgid "Tableau"
+msgstr "Tableau"
+
+msgid "Dark2 (Brewer)"
+msgstr "Dark2 (Brewer)"
+
+msgid "Set1 (Brewer)"
+msgstr "Set1 (Brewer)"
+
+msgid "Viridis"
+msgstr "Viridis"
+
+msgid "Legend Position"
+msgstr "Legendenposition"
+
+msgid "Default (Auto)"
+msgstr "Standard (Auto)"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "Bottom"
+msgstr "Unten"
+
+msgid "Bottom Right"
+msgstr "Unten rechts"
+
+msgid "Top Right"
+msgstr "Oben rechts"
+
+msgid "Left"
+msgstr "Links"
+
+msgid "Top"
+msgstr "Oben"
+
+msgid "None (Hide)"
+msgstr "Keine (Ausblenden)"
+
+msgid "Force Background Grid Lines"
+msgstr "Hintergrund-Gitternetzlinien erzwingen"
+
+msgid "Graphics Device"
+msgstr "Grafikgerät"
+
+msgid "Device type"
+msgstr "Gerätetyp"
+
+msgid "Width"
+msgstr "Breite"
+
+msgid "Height"
+msgstr "Höhe"
+
+msgid "Resolution (ppi)"
+msgstr "Auflösung (ppi)"
+
+msgid "Background"
+msgstr "Hintergrund"
+
+msgid "Transparent"
+msgstr "Transparent"
+
+msgid "White"
+msgstr "Weiß"
+
+msgid "Save Plot Object (recordPlot)"
+msgstr "Diagramm-Objekt speichern (recordPlot)"

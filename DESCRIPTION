@@ -1,0 +1,17 @@
+Package: rk.tinyplot
+Type: Package
+Title: A GUI wrapper for the tinyplot package, bringing lightweight,
+        powerful base R graphics to RKWard.
+Version: 0.0.1
+Date: 2026-10-12
+Author: Alfonso Cano
+Maintainer: Alfonso Cano <alfonso.cano@correo.buap.mx>
+Enhances: rkward
+Description: A GUI wrapper for the tinyplot package, bringing
+        lightweight, powerful base R graphics to RKWard.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyLoad: yes
+URL: http://EXAMPLE.com
+Authors@R: person(given="Alfonso", family="Cano",
+        email="alfonso.cano@correo.buap.mx", role=c("aut", "cre"))

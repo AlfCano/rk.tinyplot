@@ -1,0 +1,123 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="2DRelationships.js" />
+	<help file="2DRelationships.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<connect governor="c2_data.available" client="c2_vs.root" />
+	</logic>
+	<dialog label="tinyplot: 2D Relationships">
+		<row id="row_v2DD2DF22X">
+			<varselector id="c2_vs" />
+			<column id="clm_tDD2DF22XA">
+				<tabbook>
+					<tab label="Data" id="tab_Data">
+						<column id="clm_v2DF22XAV2">
+							<varslot id="c2_data" label="Data Frame" source="c2_vs" classes="data.frame" required="true" />
+							<varslot id="c2_x" label="X Axis Variable" source="c2_vs" required="true" />
+							<varslot id="c2_y" label="Y Axis Variable" source="c2_vs" required="true" />
+							<varslot id="c2_by" label="Group By (Color/Fill)" source="c2_vs" />
+							<varslot id="c2_facet" label="Facet Variable (Subplots)" source="c2_vs" />
+						</column>
+					</tab>
+					<tab label="Aesthetics" id="tab_Aesthtcs">
+						<column id="clm_d2PTSPLBPL">
+							<dropdown id="c2_type" label="Plot Type">
+								<option label="Scatter (Points)" value="p" checked="true" />
+								<option label="Line" value="l" />
+								<option label="Both (Points &amp; Line)" value="b" />
+								<option label="Step" value="s" />
+								<option label="Jitter" value="jitter" />
+								<option label="Boxplot" value="boxplot" />
+								<option label="Violin" value="violin" />
+								<option label="Ridge" value="ridge" />
+								<option label="Loess Smoother" value="loess" />
+								<option label="Linear Model (lm)" value="lm" />
+								<option label="Pointrange" value="pointrange" />
+							</dropdown>
+							<spinbox label="Point Character (pch)" id="c2_pch" initial="16" min="0" max="25" />
+							<spinbox label="Line Width (lwd)" id="c2_lwd" initial="1" min="0.5" max="5" />
+							<spinbox label="Opacity (Alpha)" id="c2_alpha" initial="1" min="0" max="1" />
+							<frame id="frm_chckb2ARL1">
+								<checkbox id="c2_add_lm" label="Add Regression Line (lm) layer over plot" value="1" />
+							</frame>
+						</column>
+					</tab>
+					<tab label="Labels &amp; Themes" id="tab_LblsThms">
+						<column id="clm_fTLTLMT2S2">
+							<frame label="Text Labels" id="frm_TextLbls">
+								<input label="Main Title" id="c2_main" />
+								<input label="Subtitle" id="c2_sub" />
+								<row id="row_inXAL2YAL2">
+									<input label="X-Axis Label" id="c2_xlab" />
+									<input label="Y-Axis Label" id="c2_ylab" />
+								</row>
+							</frame>
+							<frame label="tinyplot Themes &amp; Styling" id="frm_tnypltTS">
+								<row id="row_d2PTDMICCB">
+									<dropdown id="c2_theme" label="Plot Theme">
+										<option label="Default" value="default" checked="true" />
+										<option label="Minimal" value="minimal" />
+										<option label="Ipsum" value="ipsum" />
+										<option label="Clean" value="clean" />
+										<option label="Classic" value="classic" />
+										<option label="BW" value="bw" />
+										<option label="Tufte" value="tufte" />
+										<option label="Dark" value="dark" />
+										<option label="Void" value="void" />
+									</dropdown>
+									<dropdown id="c2_palette" label="Color Palette">
+										<option label="Default" value="default" checked="true" />
+										<option label="Okabe-Ito" value="okabeito" />
+										<option label="Tableau" value="tableau" />
+										<option label="Dark2 (Brewer)" value="Dark2" />
+										<option label="Set1 (Brewer)" value="Set1" />
+										<option label="Viridis" value="viridis" />
+									</dropdown>
+								</row>
+								<row id="row_d2LPDARBBR">
+									<dropdown id="c2_legend" label="Legend Position">
+										<option label="Default (Auto)" value="default" checked="true" />
+										<option label="Right" value="right" />
+										<option label="Bottom" value="bottom" />
+										<option label="Bottom Right" value="bottomright" />
+										<option label="Top Right" value="topright" />
+										<option label="Left" value="left" />
+										<option label="Top" value="top" />
+										<option label="None (Hide)" value="none" />
+									</dropdown>
+									<checkbox id="c2_grid" label="Force Background Grid Lines" value="1" />
+								</row>
+							</frame>
+						</column>
+					</tab>
+					<tab label="Output" id="tab_Output">
+						<column id="clm_fGDGD2DPNG">
+							<frame label="Graphics Device" id="frm_GrphcsDv">
+								<dropdown id="c2_dev_type" label="Device type">
+									<option label="PNG" value="PNG" checked="true" />
+									<option label="SVG" value="SVG" />
+									<option label="JPG" value="JPG" />
+								</dropdown>
+								<row id="row_sW28001004">
+									<spinbox label="Width" id="c2_dev_w" initial="800" min="100" max="4000" />
+									<spinbox label="Height" id="c2_dev_h" initial="600" min="100" max="4000" />
+									<spinbox label="Resolution (ppi)" id="c2_dev_res" initial="72" min="36" max="1200" />
+								</row>
+							</frame>
+							<saveobject label="Save Plot Object (recordPlot)" checkable="true" initial="tp_rel" id="c2_save" />
+							<preview label="Preview" id="c2_preview" />
+						</column>
+					</tab>
+				</tabbook>
+			</column>
+		</row>
+	</dialog>
+</document>

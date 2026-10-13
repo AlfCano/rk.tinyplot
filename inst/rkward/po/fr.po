@@ -1,0 +1,234 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.tinyplot 0.0.1\n"
+"Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
+"POT-Creation-Date: 2026-10-13 09:17-0600\n"
+"PO-Revision-Date: 2026-10-13 09:17-0600\n"
+"Last-Translator: Alfonso Cano <alfonso.cano@correo.buap.mx>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "1D Distributions"
+msgstr "Distributions 1D"
+
+msgid "tinyplot: 1D Distributions"
+msgstr "tinyplot : Distributions 1D"
+
+msgid "2D Relationships"
+msgstr "Relations 2D"
+
+msgid "tinyplot: 2D Relationships"
+msgstr "tinyplot : Relations 2D"
+
+msgid "Data"
+msgstr "Données"
+
+msgid "Aesthetics"
+msgstr "Esthétique"
+
+msgid "Labels & Themes"
+msgstr "Étiquettes et Thèmes"
+
+msgid "Output"
+msgstr "Sortie"
+
+msgid "Data Frame"
+msgstr "Data Frame"
+
+msgid "Variable (X)"
+msgstr "Variable (X)"
+
+msgid "X Axis Variable"
+msgstr "Variable Axe X"
+
+msgid "Y Axis Variable"
+msgstr "Variable Axe Y"
+
+msgid "Group By (Color/Fill)"
+msgstr "Grouper par (Couleur/Remplissage)"
+
+msgid "Facet Variable (Subplots)"
+msgstr "Variable de facette (Sous-graphes)"
+
+msgid "Plot Type"
+msgstr "Type de graphique"
+
+msgid "Density"
+msgstr "Densité"
+
+msgid "Histogram"
+msgstr "Histogramme"
+
+msgid "Boxplot"
+msgstr "Boîte à moustaches (Boxplot)"
+
+msgid "Scatter (Points)"
+msgstr "Nuage de points (Scatter)"
+
+msgid "Line"
+msgstr "Ligne"
+
+msgid "Both (Points & Line)"
+msgstr "Les deux (Points & Ligne)"
+
+msgid "Step"
+msgstr "Escalier (Step)"
+
+msgid "Jitter"
+msgstr "Dispersion (Jitter)"
+
+msgid "Violin"
+msgstr "Violon"
+
+msgid "Ridge"
+msgstr "Crête (Ridge)"
+
+msgid "Loess Smoother"
+msgstr "Lissage Loess"
+
+msgid "Linear Model (lm)"
+msgstr "Modèle linéaire (lm)"
+
+msgid "Pointrange"
+msgstr "Plage de points (Pointrange)"
+
+msgid "Fill Opacity (Alpha)"
+msgstr "Opacité du remplissage (Alpha)"
+
+msgid "Point Character (pch)"
+msgstr "Caractère du point (pch)"
+
+msgid "Line Width (lwd)"
+msgstr "Épaisseur de ligne (lwd)"
+
+msgid "Opacity (Alpha)"
+msgstr "Opacité (Alpha)"
+
+msgid "Add Regression Line (lm) layer over plot"
+msgstr "Ajouter une couche de ligne de régression (lm) sur le graphique"
+
+msgid "Text Labels"
+msgstr "Étiquettes de texte"
+
+msgid "Main Title"
+msgstr "Titre principal"
+
+msgid "Subtitle"
+msgstr "Sous-titre"
+
+msgid "X-Axis Label"
+msgstr "Étiquette Axe X"
+
+msgid "Y-Axis Label"
+msgstr "Étiquette Axe Y"
+
+msgid "tinyplot Themes & Styling"
+msgstr "Thèmes et Styles tinyplot"
+
+msgid "Plot Theme"
+msgstr "Thème du graphique"
+
+msgid "Default"
+msgstr "Par défaut"
+
+msgid "Minimal"
+msgstr "Minimal"
+
+msgid "Ipsum"
+msgstr "Ipsum"
+
+msgid "Clean"
+msgstr "Épuré (Clean)"
+
+msgid "Classic"
+msgstr "Classique"
+
+msgid "BW"
+msgstr "Noir et blanc (BW)"
+
+msgid "Tufte"
+msgstr "Tufte"
+
+msgid "Dark"
+msgstr "Sombre (Dark)"
+
+msgid "Void"
+msgstr "Vide (Void)"
+
+msgid "Color Palette"
+msgstr "Palette de couleurs"
+
+msgid "Okabe-Ito"
+msgstr "Okabe-Ito"
+
+msgid "Tableau"
+msgstr "Tableau"
+
+msgid "Dark2 (Brewer)"
+msgstr "Dark2 (Brewer)"
+
+msgid "Set1 (Brewer)"
+msgstr "Set1 (Brewer)"
+
+msgid "Viridis"
+msgstr "Viridis"
+
+msgid "Legend Position"
+msgstr "Position de la légende"
+
+msgid "Default (Auto)"
+msgstr "Par défaut (Auto)"
+
+msgid "Right"
+msgstr "Droite"
+
+msgid "Bottom"
+msgstr "Bas"
+
+msgid "Bottom Right"
+msgstr "En bas à droite"
+
+msgid "Top Right"
+msgstr "En haut à droite"
+
+msgid "Left"
+msgstr "Gauche"
+
+msgid "Top"
+msgstr "Haut"
+
+msgid "None (Hide)"
+msgstr "Aucune (Masquer)"
+
+msgid "Force Background Grid Lines"
+msgstr "Forcer les lignes de grille de fond"
+
+msgid "Graphics Device"
+msgstr "Périphérique graphique"
+
+msgid "Device type"
+msgstr "Type de périphérique"
+
+msgid "Width"
+msgstr "Largeur"
+
+msgid "Height"
+msgstr "Hauteur"
+
+msgid "Resolution (ppi)"
+msgstr "Résolution (ppi)"
+
+msgid "Background"
+msgstr "Arrière-plan"
+
+msgid "Transparent"
+msgstr "Transparent"
+
+msgid "White"
+msgstr "Blanc"
+
+msgid "Save Plot Object (recordPlot)"
+msgstr "Enregistrer l'objet graphique (recordPlot)"

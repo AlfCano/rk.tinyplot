@@ -1,0 +1,97 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="2DRelationships"
+	id="2DRelationships_rkward"
+	po_id="2DRelationships_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<about
+		name="rk.tinyplot"
+		shortinfo="A GUI wrapper for the tinyplot package, bringing lightweight, powerful base R graphics to RKWard."
+		longinfo="A GUI wrapper for the tinyplot package, bringing lightweight, powerful base R graphics to RKWard."
+		version="0.0.1"
+		releasedate="2026-10-12"
+		url="http://EXAMPLE.com"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_2DRelationships1DDstrbtns"
+			label="1D Distributions"
+			type="standard"
+			file="plugins/1DDistributions.xml"
+		>
+		</component>
+		<component
+			id="cmp_2DRelationships2DRltnshps"
+			label="2D Relationships"
+			type="standard"
+			file="plugins/2DRelationships.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="plots"
+			label="Plots"
+		>
+			<menu
+				id="tinyplot"
+				label="tinyplot"
+			>
+				<entry
+					component="cmp_2DRelationships1DDstrbtns"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="plots"
+			label="Plots"
+		>
+			<menu
+				id="tinyplot"
+				label="tinyplot"
+			>
+				<entry
+					component="cmp_2DRelationships2DRltnshps"
+				/>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>

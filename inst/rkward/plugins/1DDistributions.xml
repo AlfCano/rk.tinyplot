@@ -1,0 +1,109 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="1DDistributions.js" />
+	<help file="1DDistributions.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<connect governor="c1_data.available" client="c1_vs.root" />
+	</logic>
+	<dialog label="tinyplot: 1D Distributions">
+		<row id="row_v1DD1DF11V">
+			<varselector id="c1_vs" />
+			<column id="clm_tDD1DF11VX">
+				<tabbook>
+					<tab label="Data" id="tab_Data">
+						<column id="clm_v1DF11VX11">
+							<varslot id="c1_data" label="Data Frame" source="c1_vs" classes="data.frame" required="true" />
+							<varslot id="c1_x" label="Variable (X)" source="c1_vs" required="true" />
+							<varslot id="c1_by" label="Group By (Color/Fill)" source="c1_vs" />
+							<varslot id="c1_facet" label="Facet Variable (Subplots)" source="c1_vs" />
+						</column>
+					</tab>
+					<tab label="Aesthetics" id="tab_Aesthtcs">
+						<column id="clm_d1PTDHBFOA">
+							<dropdown id="c1_type" label="Plot Type">
+								<option label="Density" value="density" checked="true" />
+								<option label="Histogram" value="histogram" />
+								<option label="Boxplot" value="boxplot" />
+							</dropdown>
+							<spinbox label="Fill Opacity (Alpha)" id="c1_alpha" initial="0.5" min="0" max="1" />
+						</column>
+					</tab>
+					<tab label="Labels &amp; Themes" id="tab_LblsThms">
+						<column id="clm_fTLTLMT1S1">
+							<frame label="Text Labels" id="frm_TextLbls">
+								<input label="Main Title" id="c1_main" />
+								<input label="Subtitle" id="c1_sub" />
+								<row id="row_inXAL1YAL1">
+									<input label="X-Axis Label" id="c1_xlab" />
+									<input label="Y-Axis Label" id="c1_ylab" />
+								</row>
+							</frame>
+							<frame label="tinyplot Themes &amp; Styling" id="frm_tnypltTS">
+								<row id="row_d1PTDMICCB">
+									<dropdown id="c1_theme" label="Plot Theme">
+										<option label="Default" value="default" checked="true" />
+										<option label="Minimal" value="minimal" />
+										<option label="Ipsum" value="ipsum" />
+										<option label="Clean" value="clean" />
+										<option label="Classic" value="classic" />
+										<option label="BW" value="bw" />
+										<option label="Tufte" value="tufte" />
+										<option label="Dark" value="dark" />
+										<option label="Void" value="void" />
+									</dropdown>
+									<dropdown id="c1_palette" label="Color Palette">
+										<option label="Default" value="default" checked="true" />
+										<option label="Okabe-Ito" value="okabeito" />
+										<option label="Tableau" value="tableau" />
+										<option label="Dark2 (Brewer)" value="Dark2" />
+										<option label="Set1 (Brewer)" value="Set1" />
+										<option label="Viridis" value="viridis" />
+									</dropdown>
+								</row>
+								<row id="row_d1LPDARBBR">
+									<dropdown id="c1_legend" label="Legend Position">
+										<option label="Default (Auto)" value="default" checked="true" />
+										<option label="Right" value="right" />
+										<option label="Bottom" value="bottom" />
+										<option label="Bottom Right" value="bottomright" />
+										<option label="Top Right" value="topright" />
+										<option label="Left" value="left" />
+										<option label="Top" value="top" />
+										<option label="None (Hide)" value="none" />
+									</dropdown>
+									<checkbox id="c1_grid" label="Force Background Grid Lines" value="1" />
+								</row>
+							</frame>
+						</column>
+					</tab>
+					<tab label="Output" id="tab_Output">
+						<column id="clm_fGDGD1DPNG">
+							<frame label="Graphics Device" id="frm_GrphcsDv">
+								<dropdown id="c1_dev_type" label="Device type">
+									<option label="PNG" value="PNG" checked="true" />
+									<option label="SVG" value="SVG" />
+									<option label="JPG" value="JPG" />
+								</dropdown>
+								<row id="row_sW18001004">
+									<spinbox label="Width" id="c1_dev_w" initial="800" min="100" max="4000" />
+									<spinbox label="Height" id="c1_dev_h" initial="600" min="100" max="4000" />
+									<spinbox label="Resolution (ppi)" id="c1_dev_res" initial="72" min="36" max="1200" />
+								</row>
+							</frame>
+							<saveobject label="Save Plot Object (recordPlot)" checkable="true" initial="tp_dist" id="c1_save" />
+							<preview label="Preview" id="c1_preview" />
+						</column>
+					</tab>
+				</tabbook>
+			</column>
+		</row>
+	</dialog>
+</document>
