@@ -1,9 +1,8 @@
 # rk.tinyplot: Lightweight Base R Graphics for RKWard
 
-![Version](https://img.shields.io/badge/Version-0.0.1-blue.svg)
+![Version](https://img.shields.io/badge/Version-0.0.2-blue.svg)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![RKWard](https://img.shields.io/badge/Platform-RKWard-green)
-![R-Universe](https://img.shields.io/badge/R--Universe-Active-success)
 [![R Linter](https://github.com/AlfCano/rk.tinyplot/actions/workflows/lintr.yml/badge.svg)](https://github.com/AlfCano/rk.tinyplot/actions/workflows/lintr.yml)
 ![AI Gemini](https://img.shields.io/badge/AI-Gemini-4285F4?logo=googlegemini&logoColor=white)
 
@@ -24,6 +23,13 @@
 *   **Multilingual Ready:** Fully prepared for translation into English, Spanish, French, German, and Portuguese (Brazil).
 
 ---
+
+## What's New in Version 0.0.2
+
+*   **Advanced Legend Customization:** Added a dedicated "Legend Options" panel. You can now easily set custom titles for your legends without touching the R code.
+*   **Smart Legend Positioning (Inside/Outside):** Introduced a straightforward checkbox to place the legend strictly OUTSIDE the plot area. This visually leverages `tinyplot`'s `!` position modifier (e.g., `"right!"`), giving you pixel-perfect control over your plot's layout without obscuring data.
+*   **Under-the-Hood Stability:** Upgraded the internal JavaScript engine with robust string-escaping (`cleanStr` helpers). This ensures that custom text labels (like titles and axes) containing quotes or special characters will never break the generated R code.
+*   **Translation Updates:** All new legend features are fully translated into Spanish, French, German, and Portuguese (Brazil).
 
 ## What's New in Version 0.0.1
 

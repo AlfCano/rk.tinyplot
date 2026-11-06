@@ -6,7 +6,7 @@ local({
   rkwarddev.required("0.08-1")
 
   plugin_name <- "rk.tinyplot"
-  plugin_ver <- "0.0.1"
+  plugin_ver <- "0.0.2"
 
   package_about <- rk.XML.about(
     name = plugin_name,
@@ -28,17 +28,22 @@ local({
   # 2. Shared Helpers & UI Generators
   # =========================================================================================
 
-  js_common_helper <- '
+  js_common_helper <- "
+    function cleanStr(val) {
+        if(!val) return '';
+        return val.replace(/'/g, \"\\\\'\").replace(/\"/g, '\\\\\"');
+    }
+
     function getCol(id) {
         var raw = getValue(id);
-        if (!raw) return "NULL";
-        if (raw.indexOf("[[") > -1) {
-            var match = raw.match(/\\[\\[\\"(.*?)\\"\\]\\]/);
+        if (!raw) return 'NULL';
+        if (raw.indexOf('[[') > -1) {
+            var match = raw.match(/\\[\\[\\\"(.*?)\\\"\\]\\]/);
             return match ? match[1] : raw;
         }
-        return raw.split("$").pop();
+        return raw.split('$').pop();
     }
-  '
+  "
 
   # Shared Labels & Theme Tab
   make_theme_tab <- function(prefix) {
@@ -73,19 +78,24 @@ local({
             "Viridis" = list(val = "viridis")
           ))
         ),
-        rk.XML.row(
-          rk.XML.dropdown(label = "Legend Position", id.name = paste0(prefix, "_legend"), options = list(
-            "Default (Auto)" = list(val = "default", chk = TRUE),
-            "Right" = list(val = "right"),
-            "Bottom" = list(val = "bottom"),
-            "Bottom Right" = list(val = "bottomright"),
-            "Top Right" = list(val = "topright"),
-            "Left" = list(val = "left"),
-            "Top" = list(val = "top"),
-            "None (Hide)" = list(val = "none")
-          )),
-          rk.XML.cbox(label = "Force Background Grid Lines", value = "1", chk = FALSE, id.name = paste0(prefix, "_grid"))
-        )
+        # NUEVO: Controles avanzados para la leyenda
+        rk.XML.frame(label = "Legend Options",
+          rk.XML.row(
+            rk.XML.dropdown(label = "Legend Position", id.name = paste0(prefix, "_legend"), options = list(
+              "Default (Auto)" = list(val = "default", chk = TRUE),
+              "Right" = list(val = "right"),
+              "Bottom" = list(val = "bottom"),
+              "Bottom Right" = list(val = "bottomright"),
+              "Top Right" = list(val = "topright"),
+              "Left" = list(val = "left"),
+              "Top" = list(val = "top"),
+              "None (Hide)" = list(val = "none")
+            )),
+            rk.XML.cbox(label = "Place legend OUTSIDE plot (!)", value = "1", chk = FALSE, id.name = paste0(prefix, "_leg_outside"))
+          ),
+          rk.XML.input(label = "Legend Title (Leave empty for default)", id.name = paste0(prefix, "_leg_title"))
+        ),
+        rk.XML.cbox(label = "Force Background Grid Lines", value = "1", chk = FALSE, id.name = paste0(prefix, "_grid"))
       )
     )
   }
@@ -186,10 +196,25 @@ local({
     if (pal !== "default") { echo("p_cmd$palette <- \\"" + pal + "\\"\\n"); }
 
     var leg = getValue("c1_legend");
+    var leg_outside = getValue("c1_leg_outside") === "1"; // Cambiado a outside
+    var leg_title = cleanStr(getValue("c1_leg_title"));
+
     if (leg === "none") {
         echo("p_cmd$legend <- FALSE\\n");
-    } else if (leg !== "default") {
-        echo("p_cmd$legend <- \\"" + leg + "\\"\\n");
+    } else {
+        var leg_args = [];
+
+        if (leg !== "default") {
+            var pos_str = leg + (leg_outside ? "!" : ""); // Cambiado a outside
+            leg_args.push("\\"" + pos_str + "\\"");
+        }
+        if (leg_title !== "") {
+            leg_args.push("title = \\"" + leg_title + "\\"");
+        }
+
+        if (leg_args.length > 0) {
+            echo("p_cmd$legend <- call(\\"list\\", " + leg_args.join(", ") + ")\\n");
+        }
     }
 
     if (getValue("c1_grid") === "1") { echo("p_cmd$grid <- TRUE\\n"); }
@@ -281,10 +306,25 @@ local({
     if (pal !== "default") { echo("p_cmd$palette <- \\"" + pal + "\\"\\n"); }
 
     var leg = getValue("c2_legend");
+    var leg_outside = getValue("c2_leg_outside") === "1"; // Cambiado a outside
+    var leg_title = cleanStr(getValue("c2_leg_title"));
+
     if (leg === "none") {
         echo("p_cmd$legend <- FALSE\\n");
-    } else if (leg !== "default") {
-        echo("p_cmd$legend <- \\"" + leg + "\\"\\n");
+    } else {
+        var leg_args = [];
+
+        if (leg !== "default") {
+            var pos_str = leg + (leg_outside ? "!" : ""); // Cambiado a outside
+            leg_args.push("\\"" + pos_str + "\\"");
+        }
+        if (leg_title !== "") {
+            leg_args.push("title = \\"" + leg_title + "\\"");
+        }
+
+        if (leg_args.length > 0) {
+            echo("p_cmd$legend <- call(\\"list\\", " + leg_args.join(", ") + ")\\n");
+        }
     }
 
     if (getValue("c2_grid") === "1") { echo("p_cmd$grid <- TRUE\\n"); }

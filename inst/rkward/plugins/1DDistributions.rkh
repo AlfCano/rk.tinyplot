@@ -43,7 +43,12 @@
 		</setting>
 		<setting id="c1_palette">
 		</setting>
+		<caption id="frm_LgndOptn" />
 		<setting id="c1_legend">
+		</setting>
+		<setting id="c1_leg_outside">
+		</setting>
+		<setting id="c1_leg_title">
 		</setting>
 		<setting id="c1_grid">
 		</setting>

@@ -82,19 +82,23 @@
 										<option label="Viridis" value="viridis" />
 									</dropdown>
 								</row>
-								<row id="row_d2LPDARBBR">
-									<dropdown id="c2_legend" label="Legend Position">
-										<option label="Default (Auto)" value="default" checked="true" />
-										<option label="Right" value="right" />
-										<option label="Bottom" value="bottom" />
-										<option label="Bottom Right" value="bottomright" />
-										<option label="Top Right" value="topright" />
-										<option label="Left" value="left" />
-										<option label="Top" value="top" />
-										<option label="None (Hide)" value="none" />
-									</dropdown>
-									<checkbox id="c2_grid" label="Force Background Grid Lines" value="1" />
-								</row>
+								<frame label="Legend Options" id="frm_LgndOptn">
+									<row id="row_d2LPDARBBR">
+										<dropdown id="c2_legend" label="Legend Position">
+											<option label="Default (Auto)" value="default" checked="true" />
+											<option label="Right" value="right" />
+											<option label="Bottom" value="bottom" />
+											<option label="Bottom Right" value="bottomright" />
+											<option label="Top Right" value="topright" />
+											<option label="Left" value="left" />
+											<option label="Top" value="top" />
+											<option label="None (Hide)" value="none" />
+										</dropdown>
+										<checkbox id="c2_leg_outside" label="Place legend OUTSIDE plot (!)" value="1" />
+									</row>
+									<input label="Legend Title (Leave empty for default)" id="c2_leg_title" />
+								</frame>
+								<checkbox id="c2_grid" label="Force Background Grid Lines" value="1" />
 							</frame>
 						</column>
 					</tab>

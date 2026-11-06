@@ -2,8 +2,8 @@ Package: rk.tinyplot
 Type: Package
 Title: A GUI wrapper for the tinyplot package, bringing lightweight,
         powerful base R graphics to RKWard.
-Version: 0.0.1
-Date: 2026-10-12
+Version: 0.0.2
+Date: 2026-11-05
 Author: Alfonso Cano
 Maintainer: Alfonso Cano <alfonso.cano@correo.buap.mx>
 Enhances: rkward

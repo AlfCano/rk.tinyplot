@@ -22,14 +22,19 @@ function calculate(is_preview){
 
 	// the R code to be evaluated
 
+    function cleanStr(val) {
+        if(!val) return '';
+        return val.replace(/'/g, "\\'").replace(/"/g, '\\"');
+    }
+
     function getCol(id) {
         var raw = getValue(id);
-        if (!raw) return "NULL";
-        if (raw.indexOf("[[") > -1) {
+        if (!raw) return 'NULL';
+        if (raw.indexOf('[[') > -1) {
             var match = raw.match(/\[\[\"(.*?)\"\]\]/);
             return match ? match[1] : raw;
         }
-        return raw.split("$").pop();
+        return raw.split('$').pop();
     }
   
     var df = getValue("c1_data");
@@ -62,10 +67,25 @@ function calculate(is_preview){
     if (pal !== "default") { echo("p_cmd$palette <- \"" + pal + "\"\n"); }
 
     var leg = getValue("c1_legend");
+    var leg_outside = getValue("c1_leg_outside") === "1"; // Cambiado a outside
+    var leg_title = cleanStr(getValue("c1_leg_title"));
+
     if (leg === "none") {
         echo("p_cmd$legend <- FALSE\n");
-    } else if (leg !== "default") {
-        echo("p_cmd$legend <- \"" + leg + "\"\n");
+    } else {
+        var leg_args = [];
+
+        if (leg !== "default") {
+            var pos_str = leg + (leg_outside ? "!" : ""); // Cambiado a outside
+            leg_args.push("\"" + pos_str + "\"");
+        }
+        if (leg_title !== "") {
+            leg_args.push("title = \"" + leg_title + "\"");
+        }
+
+        if (leg_args.length > 0) {
+            echo("p_cmd$legend <- call(\"list\", " + leg_args.join(", ") + ")\n");
+        }
     }
 
     if (getValue("c1_grid") === "1") { echo("p_cmd$grid <- TRUE\n"); }

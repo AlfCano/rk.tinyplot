@@ -52,7 +52,12 @@
 		</setting>
 		<setting id="c2_palette">
 		</setting>
+		<caption id="frm_LgndOptn" />
 		<setting id="c2_legend">
+		</setting>
+		<setting id="c2_leg_outside">
+		</setting>
+		<setting id="c2_leg_title">
 		</setting>
 		<setting id="c2_grid">
 		</setting>

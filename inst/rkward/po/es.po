@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: rk.tinyplot 0.0.1\n"
+"Project-Id-Version: rk.tinyplot 0.0.2\n"
 "Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
 "POT-Creation-Date: 2026-10-13 09:17-0600\n"
 "PO-Revision-Date: 2026-10-13 09:17-0600\n"
@@ -232,3 +232,13 @@ msgstr "Blanco"
 
 msgid "Save Plot Object (recordPlot)"
 msgstr "Guardar Objeto de Gráfico (recordPlot)"
+
+msgid "Legend Options"
+msgstr "Opciones de Leyenda"
+
+msgid "Place legend OUTSIDE plot (!)"
+msgstr "Colocar la leyenda FUERA del gráfico (!)"
+
+msgid "Legend Title (Leave empty for default)"
+msgstr "Título de la Leyenda (Dejar vacío para el predeterminado)"
+
